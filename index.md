@@ -1,5 +1,5 @@
 # Glucometer Project Home
-# ![Profile Image](sample.jpg)
+# ![Profile Image](images/image.jpg)
 
 
 [Home](#home) | [Background/Proposal](#background) | [Current Work](#current-work) | [Code](#code) | [Team Photos](#team)
@@ -7,7 +7,7 @@
 This GitHub page will be used to store my work for a group <a href="https://bpaulina25.github.io/CBE3300B/">  glucometer project </a>.
 
 # Glucometer Images will go here
-# ![Glucometer Image 1](sample.jpg)
+# ![Glucometer Image 1](image/sample.jpg)
 
 # Project Overview
 
@@ -42,13 +42,18 @@ The test strips (AimStrip Plus Mini) used in our system are second-generation gl
 
 In chronoamperometry, a step potential is applied to induce the Faradaic electron transfer that can be characterized by existing equations for diffusion controlled current generation. Prior to step potential, the potential of WE is held as a value that produces no faradaic electron transfers. Then a sufficiently lower/higher potential is applied to produce the desired reduction/oxidation of the target species. 
 
-In the case of ferri/ferrocyanide, 
+The Cottrell equation, below, will be used to construct the glucometer calibration curve between current and glucose concentration. 
 
+i = (6)
 
-Predicted step potential:
-
+In the case of ferri/ferrocyanide (assuming sat'd Ag/AgCl RE), the minimum step potential can be estimated from available data. The equilibrium potential for the RE vs. SHE is +0.197 V [link] and for ferri/ferrocyanide it is +0.356 V [link]. It follows that E = + 0.356 V - 0.197 V to give an estimated 160 mV as the expected step potential minimum. This will need to be experimentally confirmed.  
 
 Trials will be conducted over a range of step potential values to assess a suitable positive applied potential to generate a diffusion controlled current (on an i vs t1/2 plot, according to (6)). Calculations can be done to determine an upper limit to the step potential to avoid interference from other oxidizable species in the analyte. Lag time will also need to be experimentally determined to avoid initial double layer charging not modeled in (6).
+
+The glucometer will apply the step potential and record the relevant current value,
+apply the calibration equation, and output the generated glucose concentration calculation.
+
+
 
 
 # Current market glucometer product design features:
