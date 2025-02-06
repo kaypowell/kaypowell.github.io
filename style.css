@@ -1,0 +1,32 @@
+/* Styling for the tab buttons */
+.tab {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #ddd;
+    text-decoration: none;
+    border-radius: 5px 5px 0 0;
+    margin-right: 5px;
+    font-weight: bold;
+    color: black;
+}
+
+.tab:hover {
+    background: #bbb;
+}
+
+/* Hide all tab content by default */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background: #f9f9f9;
+}
+
+/* Show the active tab */
+#home:target ~ #content-home,
+#work:target ~ #content-work,
+#code:target ~ #content-code,
+#team:target ~ #content-team {
+    display: block;
+}
