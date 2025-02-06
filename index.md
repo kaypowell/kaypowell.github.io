@@ -1,7 +1,51 @@
+<link rel="stylesheet" href="style.css">
+
 # Glucometer Project Home
 # ![Profile Image](images/image.jpg)
 
 
+## **Navigation Tabs**  
+[Home](#home) | [Current Work](#work) | [Code](#code) | [Team Photos](#team)
+
+<div id="home"></div>
+<div id="work"></div>
+<div id="code"></div>
+<div id="team"></div>
+
+<!-- 🔹 WRITE YOUR TEXT FOR EACH TAB BELOW -->
+
+<div class="tab-content" id="content-home">
+  <h2>Home</h2>
+  <p>Write here....</p>
+</div>
+
+<div class="tab-content" id="content-work">
+  <h2>Current Work</h2>
+  <p>Write here.</p>
+  <ul>
+    <li>1.</li>
+    <li>2.</li>
+    <li>3.</li>
+  </ul>
+</div>
+
+<div class="tab-content" id="content-code">
+  <h2>Code & Development</h2>
+  <p>Add code.</p>
+</div>
+
+<div class="tab-content" id="content-team">
+  <h2>Team Photos</h2>
+  <p>Meet the  team working on this project!</p>
+</div>
+
+
+
+
+
+
+
+# END
 [Home](#home) | [Background/Proposal](#background) | [Current Work](#current-work) | [Code](#code) | [Team Photos](#team)
 
 This GitHub page will be used to store my work for a group <a href="https://bpaulina25.github.io/CBE3300B/">  glucometer project </a>.
