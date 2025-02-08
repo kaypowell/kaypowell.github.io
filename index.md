@@ -34,34 +34,42 @@
    
   <p>The test strips (AimStrip Plus Mini) used in our system are second-generation glucose biosensors that use potassium ferricyanide as the mediator, according to the SDS [add link]. Therefore, determination of electrode-type is not needed and amperometric analysis for the ferri/ferrocyanide couple can be implemented in our glucometer.</p>
   
-  <p><b>Chronoamperometry:</b></p>
+  <p><b>Analytical methods: Chronoamperometry</b></p>
 
   <p>In chronoamperometry, a step potential is applied to induce the Faradaic electron transfer that can be characterized by existing equations for diffusion controlled current generation. Prior to step potential, the potential of WE is held as a value that produces no faradaic electron transfers. Then a sufficiently lower/higher potential is applied to produce the desired reduction/oxidation of the target species. The Cottrell equation, below, will be used to construct the glucometer calibration curve between current and glucose concentration. (add) </p>
   
   <p>In the case of ferri/ferrocyanide (assuming sat'd Ag/AgCl RE), the minimum step potential can be estimated from available data. The equilibrium potential for the RE vs. SHE is +0.197 V [link] and for ferri/ferrocyanide it is +0.356 V [link]. It follows that E = + 0.356 V - 0.197 V to give an estimated 160 mV as the expected step potential minimum. This will need to be experimentally confirmed. Trials will be conducted over a range of step potential values to assess a suitable positive applied potential to generate a diffusion controlled current (on an i vs t1/2 plot, according to (6)). Calculations can be done to determine an upper limit to the step potential to avoid interference from other oxidizable species in the analyte. Lag time will also need to be experimentally determined to avoid initial double layer charging not modeled in (6).</p>
 
-  <p>The glucometer will apply the step potential and record the relevant current value, apply the calibration equation, and output the generated glucose concentration calculation.</p>
+  <p>The glucometer will function as an amperometric biosensor that will apply the step potential and record the relevant current value, apply the calibration equation, and output the generated glucose concentration calculation. </p>
 
 
-  <p><b>Current market glucometer product design features:</b></p>
-  <p></p>
-  <p>Typical features of glucometers currently available include, but are not limited to, the following:</p>
-  <p>Copy over list</p>
-  <p></p>
-
-
-  <p><b>Preliminary firmware development:</b></p>
+  <p><b>Preliminary firm-/software development</b></p>
     <ul>
-    <li>1. Power on/off buttons and time-out response</li>
-    <li>2. CA analyte detection/initiation</li>
-    <li>3. Memory - Date/Time syncing and daily averaging or ~100 past readings storage</li>
-    <li>4. Display configuration</li>
-  </ul>
+    <li>1. Power on/off buttons and time-out response </li>
+    <li>2. CA analyte detection/initiation </li>
+    <li>3. Memory - Date/Time syncing and daily averaging or ~100 past readings storage </li>
+    <li>     a. <a href="https://www.adafruit.com/product/3800">Itsy Bitsy M4</a> MCU; will look into memory and RAM capabilities</li>
+    <li>4. Display configuration </li>
+    </ul>
+
+  <p><b>Comparison glucometer device: The <a href="https://www.germainelabs.com/wp-content/uploads/2020/08/AimStrip-Plus-BG-Flyer-02-19.pdf"> AimStrip Plus Meter</a></b></p>
+    <ul>
+    <li>1. 20-600 mg/dL range </li>
+    <li>2. 10 second response time </li>
+    <li>3. 300 reading date/timestamped memory </li>
+    <li>4. GOx and K3[Fe(CN)6] enables electrode </li>
+    <li>5. English & Spanish instructions </li>
+    <li>6. Available error grid data </li>
+    </ul>  
 </div>
 
 <div class="tab-content" id="content-work">
   <h2>Current Work</h2>
-  <p>Proposed calibration methodology:</p>
+  <p>Proposed calibration methodology </p>
+  <p> Using a known concentration of a glucose in PBS (40-200 mg/dl?) sample, a range of potentials steps (0-400 mV?) will be applied to determine the minimum potential for a diffusion-controlled current characterized by the Cottrell equation. The minimum potential will be utilized to avoid other oxidizable species from reacting at the higher potentials.</p>
+  <p> Lag time before data collection will also be experimentally determined to allow time for the reacion to occur and the exclusion of capacitive current data. </p>
+  <p> Once these parameters are determined, a calibration curve can be constructed over the specified glucose concentration range. </p>
+
 </div>
 
 <div class="tab-content" id="content-code">
