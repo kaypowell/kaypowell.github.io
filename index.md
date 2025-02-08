@@ -60,6 +60,11 @@
     <li>4. GOx and K3[Fe(CN)6] enables electrode </li>
     <li>5. English & Spanish instructions </li>
     <li>6. Available error grid data </li>
+    <li>7. ISO 15197 accuracy requirements </li>
+    <li>     a. Above 100 mg/dL: 土 15 mg/dL </li>
+    <li>     b. Below 100 mg/dL: 15% margin of error </li>
+    <li>     c. Consensus error grid </li>
+    <li>     d. Specificity to hypoglycemia is more important </li>
     </ul>  
 </div>
 
