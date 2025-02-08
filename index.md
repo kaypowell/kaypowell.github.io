@@ -74,7 +74,6 @@
   <p> Using a known concentration of a glucose in PBS (40-200 mg/dl?) sample, a range of potentials steps (0-400 mV?) will be applied to determine the minimum potential for a diffusion-controlled current characterized by the Cottrell equation. The minimum potential will be utilized to avoid other oxidizable species from reacting at the higher potentials.</p>
   <p> Lag time before data collection will also be experimentally determined to allow time for the reacion to occur and the exclusion of capacitive current data. </p>
   <p> Once these parameters are determined, a calibration curve can be constructed over the specified glucose concentration range. </p>
-
 </div>
 
 <div class="tab-content" id="content-code">
