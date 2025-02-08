@@ -21,50 +21,29 @@
 <div class="tab-content" id="content-proposal">
   <h2>Proposal</h2>
   <p><b>Review of glucometer electrochemical reactions</b></p>
-  <p>Glucose monitoring devices are currently dominated by electrochemically mediated analytical techniques. The main governing reaction in glucose concentration determination is the aerobic oxidation of glucose, shown below. The chemistry involved is the oxidation of glucose via the enzyme glucose oxidase (GOx) to produce glucono-d-lactone (GNL). The dissolved oxygen re-oxidizes the enzyme, producing hydrogen peroxide in molar equivalence.</p>
-  <p></p>
-  <p>$\alpha \text{-D-glucose} \rightleftharpoons \beta \text{-D-glucose}$                            (1)</p>
-  <p></p>
-  <p>$\beta \text{-D-glucose} + \text{O}_{2} \overset{\text{GO}_{x}}{\rightarrow}$</p>
-  <p></p>
-  <p>\text{H}_{2}\text{O}_{2} + \text{GNL}                  (2)</p>
-  <p></p>
-  <p>H2O2 --> 2H+ + O2 + 2e-                               (3)</p>
-  <p></p>
-  <p>O2 + 4e- --> 2O2-                                    (4)</p>
-  <p></p>
-  <p>A relatively high stock concentration (250 g/L) of b-D-glucose in PBS will be used for preparing dilutions of experimental blood serum simulant. If preparation of fresh glucose is needed, time for anomeric equilibrium be taken into account (1), as glucose oxidase (GOx) is only active on the b-D glucose conformation (2). Otherwise measurements will not be reliable due to fluctuating b-D-glucose concentration.</p>
-  <p></p>
-  <p>As shown in (2), the amount of dissolved molecular oxygen present and H2O2 produced is in molar equivalence with the glucose, and electroanalytical methods can be employed to measure the current generated at the electrode and determine glucose concentration in whole blood/blood serum. </p>
-  <p></p>
-  <p>H2O2 is an electrochemically active species, and is oxidized on the test strip (usually a Pt anode) in the form of (3). Monitoring the amount of oxygen consumed via Clark electrodes (4) can also allow for glucose concentration determination using selective oxygen reduction. </p>
-  <p></p>
-  <p>These preceding reactions represent the enzyme interactions of first-generation blood sugar test strips. However, the limitations of this approach are mainly due to oxygen’s poor performance as an electron acceptor due to its reduced solubility of oxygen in blood and susceptibility to oxygen deficit [add link]. Additionally, measurement of H2O2 concentration via amperometric methods tended to require high operating potentials for sufficient selectivity [add link]. Thus, mediator ions were integrated into second-generation glucose biosensors to more accurately measure glucose concentration-dependent current generation. A proposed mechanism is seen below [add link]:</p>
-  <p></p>
-  <p>Fe(III)cat-GOxRED + (5)</p>
-  <p></p>
-  <p>In these test strips, the enzyme is re-oxidized by the mediator. Then, the mediator reagent is re-oxidized at the anode surface, generating an electrical current proportional to the concentration of glucose. Ferrous compounds like ferrocenes and ferricyanide are a common selection due to high stability in both  oxidized and reduced states. </p>
-  <p></p>
+  <p>Glucose monitoring devices are currently dominated by electrochemically mediated analytical techniques. The main governing reaction in glucose concentration determination is the aerobic oxidation of glucose, shown below. The chemistry involved is the oxidation of glucose via the enzyme glucose oxidase (GOx) to produce glucono-d-lactone (GNL). The dissolved oxygen re-oxidizes the enzyme, producing hydrogen peroxide in molar equivalence.
+  <ul>
+  <li>a-D-glucose <--> b-D-glucose        (1)</li>
+  <li>b-D-glucose + O2 -GOx-> H2O2 + GNL  (2)</li>
+  <li>H2O2 --> 2H+ + O2 + 2e-             (3)</li>
+  <li>O2 + 4e- --> 2O2-                   (4)</li>
+  </ul>
+  <p>A relatively high stock concentration (250 g/L) of b-D-glucose in PBS will be used for preparing dilutions of experimental blood serum simulant. If preparation of fresh glucose is needed, time for anomeric equilibrium be taken into account (1), as glucose oxidase (GOx) is only active on the b-D glucose conformation (2). Otherwise measurements will not be reliable due to fluctuating b-D-glucose concentration. As shown in (2), the amount of dissolved molecular oxygen present and H2O2 produced is in molar equivalence with the glucose, and electroanalytical methods can be employed to measure the current generated at the electrode and determine glucose concentration in whole blood/blood serum. H2O2 is an electrochemically active species, and is oxidized on the test strip (usually a Pt anode) in the form of (3). Monitoring the amount of oxygen consumed via Clark electrodes (4) can also allow for glucose concentration determination using selective oxygen reduction. </p>
+
+  <p>These preceding reactions represent the enzyme interactions of first-generation blood sugar test strips. However, the limitations of this approach are mainly due to oxygen’s poor performance as an electron acceptor due to its reduced solubility of oxygen in blood and susceptibility to oxygen deficit [add link]. Additionally, measurement of H2O2 concentration via amperometric methods tended to require high operating potentials for sufficient selectivity [add link]. Thus, mediator ions were integrated into second-generation glucose biosensors to more accurately measure glucose concentration-dependent current generation. In these test strips, the enzyme is re-oxidized by the mediator. Then, the mediator reagent is re-oxidized at the anode surface, generating an electrical current proportional to the concentration of glucose. Ferrous compounds like ferrocenes and ferricyanide are a common selection due to high stability in both  oxidized and reduced states. 
+   
   <p>The test strips (AimStrip Plus Mini) used in our system are second-generation glucose biosensors that use potassium ferricyanide as the mediator, according to the SDS [add link]. Therefore, determination of electrode-type is not needed and amperometric analysis for the ferri/ferrocyanide couple can be implemented in our glucometer.</p>
-  <p></p>
+  
   <p><b>Chronoamperometry:</b></p>
-  <p></p>
-  <p>In chronoamperometry, a step potential is applied to induce the Faradaic electron transfer that can be characterized by existing equations for diffusion controlled current generation. Prior to step potential, the potential of WE is held as a value that produces no faradaic electron transfers. Then a sufficiently lower/higher potential is applied to produce the desired reduction/oxidation of the target species. </p>
-  <p></p>
-  <p>The Cottrell equation, below, will be used to construct the glucometer calibration curve between current and glucose concentration. </p>
-  <p></p>
-  <p>i = (6)</p>
-  <p></p>
-  <p>In the case of ferri/ferrocyanide (assuming sat'd Ag/AgCl RE), the minimum step potential can be estimated from available data. The equilibrium potential for the RE vs. SHE is +0.197 V [link] and for ferri/ferrocyanide it is +0.356 V [link]. It follows that E = + 0.356 V - 0.197 V to give an estimated 160 mV as the expected step potential minimum. This will need to be experimentally confirmed.  </p>
-  <p></p>
-  <p>Trials will be conducted over a range of step potential values to assess a suitable positive applied potential to generate a diffusion controlled current (on an i vs t1/2 plot, according to (6)). Calculations can be done to determine an upper limit to the step potential to avoid interference from other oxidizable species in the analyte. Lag time will also need to be experimentally determined to avoid initial double layer charging not modeled in (6).</p>
-  <p></p>
+
+  <p>In chronoamperometry, a step potential is applied to induce the Faradaic electron transfer that can be characterized by existing equations for diffusion controlled current generation. Prior to step potential, the potential of WE is held as a value that produces no faradaic electron transfers. Then a sufficiently lower/higher potential is applied to produce the desired reduction/oxidation of the target species. The Cottrell equation, below, will be used to construct the glucometer calibration curve between current and glucose concentration. (add) </p>
+  
+  <p>In the case of ferri/ferrocyanide (assuming sat'd Ag/AgCl RE), the minimum step potential can be estimated from available data. The equilibrium potential for the RE vs. SHE is +0.197 V [link] and for ferri/ferrocyanide it is +0.356 V [link]. It follows that E = + 0.356 V - 0.197 V to give an estimated 160 mV as the expected step potential minimum. This will need to be experimentally confirmed. Trials will be conducted over a range of step potential values to assess a suitable positive applied potential to generate a diffusion controlled current (on an i vs t1/2 plot, according to (6)). Calculations can be done to determine an upper limit to the step potential to avoid interference from other oxidizable species in the analyte. Lag time will also need to be experimentally determined to avoid initial double layer charging not modeled in (6).</p>
+
   <p>The glucometer will apply the step potential and record the relevant current value, apply the calibration equation, and output the generated glucose concentration calculation.</p>
 
 
-
-  <p></p>
-  <p><b>Current market glucometer product design features:</b>
+  <p><b>Current market glucometer product design features:</b></p>
   <p></p>
   <p>Typical features of glucometers currently available include, but are not limited to, the following:</p>
   <p>Copy over list</p>
@@ -82,7 +61,7 @@
 
 <div class="tab-content" id="content-work">
   <h2>Current Work</h2>
-  <p>Experimental set up...</p>
+  <p>Proposed calibration methodology:</p>
 </div>
 
 <div class="tab-content" id="content-code">
