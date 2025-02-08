@@ -25,6 +25,7 @@
 
 /* Show the active tab */
 #home:target ~ #content-home,
+#proposal:target ~ #content-proposal,
 #work:target ~ #content-work,
 #code:target ~ #content-code,
 #team:target ~ #content-team {
