@@ -25,29 +25,42 @@
   <section id="milestones" class="container py-5">
     <h2 class="text-primary">Project Milestones</h2>
 
-    <ul class="nav nav-tabs" id="milestoneTabs" role="tablist">
-      <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="milestone4-pot-tab" data-bs-toggle="tab" data-bs-target="#milestone4-pot-tab" type="button" role="tab" aria-controls="milestone4-pot-tab" aria-selected="true">
-          Milestone 4: Potentiostat
-        </button>
-      </li>
+<ul class="nav nav-tabs" id="milestoneTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button
+      class="nav-link active"
+      id="milestone4-pot-tab"
+      data-bs-toggle="tab"
+      data-bs-target="#milestone4-pot"
+      type="button"
+      role="tab"
+      aria-controls="milestone4-pot"
+      aria-selected="true">
+      Milestone 4: Potentiostat
+    </button>
+  </li>
+</ul>
+
+<div class="tab-content" id="milestoneTabsContent">
+  <div
+    class="tab-pane fade show active"
+    id="milestone4-pot"
+    role="tabpanel"
+    aria-labelledby="milestone4-pot-tab">
+
+    <h3 class="mt-4">Milestone 4: Potentiostat</h3>
+
+    <p>We are using the IO Rodeo’s Rodeostat as our potentiostat circuit base.</p>
+    <p>
+      <a href="https://iorodeo.com/products/rodeostat" target="_blank" class="btn btn-sm btn-primary">View IO Rodeostat</a>
+    </p>
+
+    <h5 class="mt-4">How to Set Up the IO Rodeostat</h5>
+    <ul>
+      <li>Download <code>potentiostat.py</code> from the IO Rodeo GitHub (version 0.0.9)</li>
+      <li>Follow the setup instructions at <a href="https://iorodeo.github.io/iorodeo-potentiostat-docs-build/installation.html" target="_blank">IO Rodeo Docs</a></li>
+      <li>Customize your code and begin testing</li>
     </ul>
-
-    <div class="tab-content" id="milestoneTabsContent">
-      <div class="tab-pane fade show active" id="milestone4-pot-tab" role="tabpanel" aria-labelledby="milestone4-pot-tab">
-        <h3 class="mt-4">Milestone 4: Potentiostat</h3>
-
-        <p>We are using the IO Rodeo’s Rodeostat as our potentiostat circuit base.</p>
-        <p>
-          <a href="https://iorodeo.com/products/rodeostat" target="_blank" class="btn btn-sm btn-primary">View IO Rodeostat</a>
-        </p>
-
-        <h5 class="mt-4">How to Set Up the IO Rodeostat</h5>
-        <ul>
-          <li>Download <code>potentiostat.py</code> from the IO Rodeo GitHub (version 0.0.9)</li>
-          <li>Follow the setup instructions at <a href="https://iorodeo.github.io/iorodeo-potentiostat-docs-build/installation.html" target="_blank">IO Rodeo Docs</a></li>
-          <li>Customize your code and begin testing</li>
-        </ul>
 
         <h5 class="mt-4">Calibration</h5>
         <img src="Images/calibration.png" alt="Calibration Graph" class="img-fluid my-3" />
