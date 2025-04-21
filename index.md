@@ -18,7 +18,7 @@
   <p>Until then, click around to learn more about what I'm working on!</p>
   <p>Check out my IPDP slides where I outline preliminary design features, experimental setup, and market research and commercial viability for this project below.</p>
   <p>
-    <a href="Materials/IDPD_slides.pdf" download class="btn" style="display: inline-block; padding: 10px 20px; background-color: #1e6f5c; color: white; border-radius: 6px; text-decoration: none;">
+    <a href="Materials/IPDP_slides.pdf" download class="btn" style="display: inline-block; padding: 10px 20px; background-color: #1e6f5c; color: white; border-radius: 6px; text-decoration: none;">
       Click to Download IPDP
     </a>
   </p>
