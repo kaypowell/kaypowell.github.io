@@ -19,14 +19,6 @@
   <!-- Header -->
   <header class="text-center py-5" style="background-color: #1e6f5c; color: white;">
     <h1>CBE3300B Project Hub</h1>
-    <p>Explore ongoing and completed projects</p>
-    <nav>
-      <a href="#about" class="btn btn-outline-light m-2">About</a>
-      <a href="#projects" class="btn btn-outline-light m-2">Projects</a>
-      <a href="#gantt" class="btn btn-outline-light m-2">GANTT Schedule</a>
-      <a href="#assignments" class="btn btn-outline-light m-2">Assignments</a>
-      <a href="#contact" class="btn btn-outline-light m-2">Contact</a>
-    </nav>
   </header>
 
   <!-- Milestones Section -->
@@ -35,14 +27,14 @@
 
     <ul class="nav nav-tabs" id="milestoneTabs" role="tablist">
       <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="milestone4-pot-tab" data-bs-toggle="tab" data-bs-target="#milestone4" type="button" role="tab" aria-controls="milestone4" aria-selected="true">
+        <button class="nav-link active" id="milestone4-pot-tab" data-bs-toggle="tab" data-bs-target="#milestone4-pot-tab" type="button" role="tab" aria-controls="milestone4-pot-tab" aria-selected="true">
           Milestone 4: Potentiostat
         </button>
       </li>
     </ul>
 
     <div class="tab-content" id="milestoneTabsContent">
-      <div class="tab-pane fade show active" id="milestone4" role="tabpanel" aria-labelledby="milestone4-pot-tab">
+      <div class="tab-pane fade show active" id="milestone4-pot-tab" role="tabpanel" aria-labelledby="milestone4-pot-tab">
         <h3 class="mt-4">Milestone 4: Potentiostat</h3>
 
         <p>We are using the IO Rodeo’s Rodeostat as our potentiostat circuit base.</p>
@@ -139,5 +131,14 @@
       </div>
     </div>
   </section>
+
+  <script>
+    const firstTabEl = document.querySelector('#milestoneTabs button.nav-link');
+    if (firstTabEl) {
+      const tab = new bootstrap.Tab(firstTabEl);
+      tab.show();
+    }
+  </script>
+  
 </body>
 </html>
