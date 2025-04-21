@@ -122,7 +122,7 @@
   <p> I am a chemical engineer currently studying at UPenn. In my free time I like to do crosswords, bar trivia, cook, beat my friends at tennis, visit museums, and design glucometers. </p>
   <p>
     <strong>Contact me:</strong><br>
-    <a href="mailto:kmpowell@seas.upenn.edu">example@email.com</a>
+    <a href="mailto:kmpowell@seas.upenn.edu">kmpowell@seas.upenn.edu</a>
   </p>
 </div>
 
