@@ -48,15 +48,15 @@
   <ul>
     <li>
       <a href="MVP Codes/milestone 4 code.py" target="_blank">MVP Rodeostat-Arduino Code</a>: This script runs the Rodeostat and calibration with UI compatibility<br>
-      for the Arduino GIGA R1. <b>Key features:</b> Serial port auto-detection, chronoamperometry execution,<br>
+      for the Arduino GIGA R1. <b>Key features:</b> Serial port auto-detection, chronoamperometry execution,
       signal processing, Arduino communication, and data logging.
     </li>
     <li>
-      <a href="MVP Codes/glucometer GUI.py" target="_blank">Glucometer GUI Script</a>: Standalone Python GUI for users without Arduino display.<br>
+      <a href="MVP Codes/glucometer GUI.py" target="_blank">Glucometer GUI Script</a>: Standalone Python GUI for users without Arduino display.
       <b>Key features:</b> Simple button interface, daily average calculation, threaded execution for responsiveness.
     </li>
     <li>
-      <a href="MVP Codes/glucometer.py" target="_blank">Glucometer Core Functions</a>: Core logic supporting both Arduino and GUI workflows.<br>
+      <a href="MVP Codes/glucometer.py" target="_blank">Glucometer Core Functions</a>: Core logic supporting both Arduino and GUI workflows.
       <b>Key features:</b> Modular architecture, signal processing, Excel/CSV logging, and error handling.
     </li>
   </ul>
