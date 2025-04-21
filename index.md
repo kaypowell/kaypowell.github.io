@@ -116,9 +116,11 @@
 </div>
 
 <div class="tab-content" id="content-me">
-  <h2>Hi I'm Kayla! (That's me on the right.)</h2>
+  <h2>About Me</h2>
   <img src="Images/round_profile.png" alt="Kayla profile photo" style="float: right; width: 150px; border-radius: 50%; margin: 0 0 1em 1em;">
-
+  <p> 
+   Hi I'm Kayla! (That's me on the right.)
+  </p>
   <p>
     I am a chemical engineer currently studying at UPenn. In my free time I like to do crosswords, cook, beat my friends at tennis, visit museums, and design glucometers.
   </p>
