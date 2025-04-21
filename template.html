@@ -72,36 +72,63 @@
           <li>Convert regression slope to glucose concentration using a calibration function</li>
         </ul>
 
-        <h5 class="mt-4">Data Analysis Pseudocode</h5>
-        <pre class="bg-light p-3 rounded">
-Load chronoamperometry data into DataFrame (Excel/CSV)
+<h5 class="mt-4">Data Analysis Pseudocode</h5>
+<ol>
+  <li>
+    Load raw chronoamperometry data from Excel/CSV (via Rodeostat) into a DataFrame.
+    <ul>
+      <li>Extract time, voltage, and current traces.</li>
+      <li>Filter to select current data once step is applied.</li>
+    </ul>
+  </li>
 
-Use parse_data(df, num_columns):
-    - Extract t, V, and I
-    - Mask out pre-step regions
-    - Return only the active electrochemical window
+  <li>
+    Determine if system exhibits Cottrell behavior and when it begins. This confirms whether the quiet time and step potential settings allow proper diffusion-limited response.
+    <ul>
+      <li>Slide a regression window across current vs 1/√t.</li>
+      <li>Evaluate R² for each segment.</li>
+      <li>Identify the window with the <em>highest R²</em> → most "Cottrell-like" behavior.</li>
+    </ul>
+    <strong>Outcome:</strong>
+    <ul>
+      <li>Confirms the best time region for linear fitting.</li>
+      <li>Helps validate if the signal shape is consistent across samples.</li>
+      <li>Indicates if quiet time needs tuning.</li>
+    </ul>
+  </li>
 
-Use compare_regression(df, conc, col, smooth_func, plot):
-    - Slide regression window across i vs 1/√t
-    - Maximize R² to find Cottrell region
+  <li>
+    Evaluate the Cottrell region of entire data set.
+    <ul>
+      <li>Slice each dataset using the optimal time window found earlier (or use fixed indices).</li>
+      <li>Recalculate 1/√t vs current (smoothed) and fit a linear regression.</li>
+    </ul>
+  </li>
 
-Use get_analyzed_data(...):
-    - Slice data using optimal or fixed indices
-    - Fit 1/√t vs. smoothed current
-    - Save slope, R², and fit info
+  <li>
+    Determine most appropriate calibration curve form
+    <ul>
+      <li>Fit either a linear or a second-order polynomial model.</li>
+      <li>Plot calibration line with ±15 mg/dL or ±15% ISO error margins.</li>
+      <li>Return regression parameters and R².</li>
+    </ul>
+    <p class="mt-2">Test two linear calibration equations for two different concentration regimes:</p>
+    <ul>
+      <li>Automatically detect a breakpoint.</li>
+      <li>Fit two independent linear models for low and high concentrations.</li>
+      <li>Ensure continuous intersection at slope threshold.</li>
+      <li>Plot piecewise curve with ISO bounds and R² for both segments.</li>
+    </ul>
+    <p><strong>Conclusion:</strong> A piecewise linear model better captures low vs high glucose behavior.</p>
+  </li>
 
-Build calibration model:
-    - Try single linear or 2nd-order polynomial
-    - Overlay ±15% ISO bounds
-    - Return regression params and R²
-
-Test piecewise fit:
-    - Fit two linear models for low/high glucose
-    - Auto-detect intersection point
-    - Plot both fits and ISO bands
-
-Validate with Clarke Error Grid
-        </pre>
+  <li>
+    Validate glucometer performance.
+    <ul>
+      <li>Plot the data in a Clarke Error Grid to assess diagnostic implications of current glucometer function.</li>
+    </ul>
+  </li>
+</ol>
 
         <h5 class="mt-4">Relevant Code Files</h5>
         <ul>
