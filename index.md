@@ -47,7 +47,7 @@
   <h3>Relevant Code Files</h3>
   <ul>
     <li>
-      <a href="MVP Codes/milestone 4 code.py" target="_blank">MVP Rodeostat-Arduino Code</a>: This script runs the Rodeostat and calibration with UI compatibility<br>
+      <a href="MVP Codes/milestone 4 code.py" target="_blank">MVP Rodeostat-Arduino Code</a>: This script runs the Rodeostat and calibration with UI compatibility
       for the Arduino GIGA R1. <b>Key features:</b> Serial port auto-detection, chronoamperometry execution,
       signal processing, Arduino communication, and data logging.
     </li>
