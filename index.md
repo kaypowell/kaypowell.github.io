@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="style.css">
 
-# Glucometer Project Home
+# Glucometer Project
  
 [Home](#home) | [Proposal](#proposal) | [Current Work](#work) | [Code](#code) | [About Me](#me)
 
