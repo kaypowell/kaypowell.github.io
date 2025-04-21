@@ -28,6 +28,6 @@
 #proposal:target ~ #content-proposal,
 #work:target ~ #content-work,
 #code:target ~ #content-code,
-#team:target ~ #content-me {
+#me:target ~ #content-me {
     display: block;
 }
