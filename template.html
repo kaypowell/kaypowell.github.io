@@ -1,7 +1,116 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CBE3300B Project Hub</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Bundle with JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- FontAwesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body style="background-color: #f5f5f5; color: #2c3e50;">
+  <!-- Header -->
+  <header class="text-center py-5" style="background-color: #1e6f5c; color: white;">
+    <h1>CBE3300B Project Hub</h1>
+    <p>Explore ongoing and completed projects</p>
+    <nav>
+      <a href="#about" class="btn btn-outline-light m-2">About</a>
+      <a href="#projects" class="btn btn-outline-light m-2">Projects</a>
+      <a href="#gantt" class="btn btn-outline-light m-2">GANTT Schedule</a>
+      <a href="#assignments" class="btn btn-outline-light m-2">Assignments</a>
+      <a href="#contact" class="btn btn-outline-light m-2">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Milestones Section -->
+  <section id="milestones" class="container py-5">
+    <h2 class="text-primary">Project Milestones</h2>
+
+    <ul class="nav nav-tabs" id="milestoneTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="milestone4-pot-tab" data-bs-toggle="tab" data-bs-target="#milestone4" type="button" role="tab" aria-controls="milestone4" aria-selected="true">
+          Milestone 4: Potentiostat
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="milestoneTabsContent">
+      <div class="tab-pane fade show active" id="milestone4" role="tabpanel" aria-labelledby="milestone4-pot-tab">
+        <h3 class="mt-4">Milestone 4: Potentiostat</h3>
+
+        <p>We are using the IO Rodeo’s Rodeostat as our potentiostat circuit base.</p>
+        <p>
+          <a href="https://iorodeo.com/products/rodeostat" target="_blank" class="btn btn-sm btn-primary">View IO Rodeostat</a>
+        </p>
+
+        <h5 class="mt-4">How to Set Up the IO Rodeostat</h5>
+        <ul>
+          <li>Download <code>potentiostat.py</code> from the IO Rodeo GitHub (version 0.0.9)</li>
+          <li>Follow the setup instructions at <a href="https://iorodeo.github.io/iorodeo-potentiostat-docs-build/installation.html" target="_blank">IO Rodeo Docs</a></li>
+          <li>Customize your code and begin testing</li>
+        </ul>
+
+        <h5 class="mt-4">Calibration</h5>
+        <img src="Images/calibration.png" alt="Calibration Graph" class="img-fluid my-3" />
+
+        <h5>Clarke Error Grid</h5>
+        <img src="Images/CEG_sort_of.png" alt="Clarke Error Grid" class="img-fluid my-3" />
+
+        <h5>Methodology</h5>
+        <ul>
+          <li>Apply a 200 mV potential after a 6-second quiet time (reaction period)</li>
+          <li>Step potential and quiet time were experimentally optimized</li>
+          <li>Run chronoamperometry for 1 second</li>
+          <li>Perform linear regression of current vs. 1/√t</li>
+          <li>Convert regression slope to glucose concentration using a calibration function</li>
+        </ul>
+
+        <h5 class="mt-4">Data Analysis Pseudocode</h5>
+        <pre class="bg-light p-3 rounded">
+Load chronoamperometry data into DataFrame (Excel/CSV)
+
+Use parse_data(df, num_columns):
+    - Extract t, V, and I
+    - Mask out pre-step regions
+    - Return only the active electrochemical window
+
+Use compare_regression(df, conc, col, smooth_func, plot):
+    - Slide regression window across i vs 1/√t
+    - Maximize R² to find Cottrell region
+
+Use get_analyzed_data(...):
+    - Slice data using optimal or fixed indices
+    - Fit 1/√t vs. smoothed current
+    - Save slope, R², and fit info
+
+Build calibration model:
+    - Try single linear or 2nd-order polynomial
+    - Overlay ±15% ISO bounds
+    - Return regression params and R²
+
+Test piecewise fit:
+    - Fit two linear models for low/high glucose
+    - Auto-detect intersection point
+    - Plot both fits and ISO bands
+
+Validate with Clarke Error Grid
+        </pre>
+
+        <h5 class="mt-4">Relevant Code Files</h5>
+        <ul>
+          <li><a href="MVP Codes/milestone 4 code.py" target="_blank">Glucometer-Arduino Code</a></li>
+          <li><a href="MVP Codes/glucometer GUI.py" target="_blank">Glucometer GUI Script</a></li>
+          <li><a href="MVP Codes/glucometer.py" target="_blank">Glucometer Core Functions</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
