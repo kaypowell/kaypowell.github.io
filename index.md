@@ -25,7 +25,6 @@
 
 <div class="tab-content" id="content-work">
   <h2>Current Work</h2>
-  <p>Proposed calibration methodology </p>
   <p>We are comparing our glucometer with the AimStrip Plus. This meter, like all glucometers, is calibrated to whole blood. Since we are
   comparing our device to the AimStrip Plus as a reference, we need to find a way to convert our calibration to glucose in PBS (simulates
    plasma) to glucose concentrations in whole blood.
