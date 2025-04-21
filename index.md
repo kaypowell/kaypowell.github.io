@@ -117,7 +117,16 @@
 </div>
 
 <div class="tab-content" id="content-me">
-  <h2>Hi! That's me, Kayla, on the right.</h2>
-  <p>Description here...</p>
+  <h2>Hi I'm Kayla! (That's me on the right.)</h2>
+  <img src="Images/round_profile.png" alt="Kayla profile photo" style="float: right; width: 150px; border-radius: 50%; margin: 0 0 1em 1em;">
+
+  <p>
+    I am a chemical engineer currently studying at UPenn. In my free time I like to do crosswords, cook, beat my friends at tennis, visit museums, and design glucometers.
+  </p>
+
+  <p>
+    <strong>Contact me:</strong><br>
+    <a href="mailto:kmpowell@seas.upenn.edu">example@email.com</a>
+  </p>
 </div>
 
