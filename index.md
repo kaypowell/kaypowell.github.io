@@ -117,7 +117,7 @@
 </div>
 
 <div class="tab-content" id="content-me">
-  <h2>Team Photos</h2>
-  <p>Meet the  team working on this project!</p>
+  <h2>Hi! That's me, Kayla, on the right.</h2>
+  <p>Description here...</p>
 </div>
 
