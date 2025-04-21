@@ -32,7 +32,7 @@
 </div>
 
 <div class="tab-content" id="content-code">
-  <h2>Rodeostat configuration and python development</h2>
+  <h2>Potentiostat Code Development</h2>
 
   <p>We are using the <a href="https://iorodeo.com/products/rodeostat" target="_blank">IO Rodeo Rodeostat</a> as our potentiostat circuit base.</p>
 
